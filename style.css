@@ -476,3 +476,8 @@ a:focus, button:focus {
     font-size: 1.2rem !important;
   }
 }
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
