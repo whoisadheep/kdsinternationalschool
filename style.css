@@ -423,19 +423,56 @@ a:focus, button:focus {
     }
 }
 
-#contact .grid > div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Fix for Get in Touch section on mobile */
+@media (max-width: 768px) {
+  /* Override the existing contact grid rules */
+  #contact {
+    display: block !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  #contact .grid {
+    display: block !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  #contact .grid > div:first-child {
+    display: block !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Ensure both contact boxes stack properly */
+  #contact .glass-card,
+  #contact .grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Fix form elements inside contact section */
+  #contact input,
+  #contact textarea,
+  #contact button {
+    width: 100% !important;
+    box-sizing: border-box;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
 }
 
-#contact {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#contact .grid {
-  align-items: center; /* make left + right column align vertically */
+/* Additional fix for very small screens */
+@media (max-width: 480px) {
+  #contact .glass-card {
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  #contact h3 {
+    font-size: 1.2rem !important;
+  }
 }
