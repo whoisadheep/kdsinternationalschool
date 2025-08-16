@@ -36,25 +36,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Enhanced Intersection Observer for animations
-    const observerOptions = {
-        root: null,
-        threshold: 0.2,
-        rootMargin: '-50px'
-    };
+    // Enhanced Intersection Observer for animations (Mobile friendly)
+const observerOptions = {
+    root: null,
+    threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+    rootMargin: window.innerWidth <= 768 ? '0px' : '-50px'
+};
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+// Apply fade-in immediately for mobile as a fallback
+function fallbackShowFadeInSections() {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            section.classList.add('is-visible');
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
         });
-    }, observerOptions);
+    }
+}
 
-    // Observe all fade-in sections
-    document.querySelectorAll('.fade-in-section').forEach(section => {
-        observer.observe(section);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Unobserve only after revealing
+        }
     });
+}, observerOptions);
+
+// Observe all fade-in sections
+document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
+
+// Fallback: Always show on mobile after 2s, in case observer threshold fails
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(fallbackShowFadeInSections, 2000);
+});
+
 
     // Enhanced Gallery Slider
     const sliderImages = document.querySelectorAll('.slider-image');
