@@ -53,6 +53,30 @@
             opacity: 0;
         }
 
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .glass {
+                backdrop-filter: blur(15px);
+                background: rgba(255, 255, 255, 0.12);
+            }
+            
+            .gradient-bg {
+                background-attachment: scroll;
+            }
+            
+            /* Hide floating elements on mobile for performance */
+            .fixed {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glass {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.15);
+            }
+        }
+
         tailwind.config = {
             theme: {
                 extend: {
@@ -79,13 +103,13 @@
     </div>
 
     <!-- Main Content -->
-    <div class="min-h-screen flex items-center justify-center px-6 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
+    <div class="min-h-screen flex items-center justify-center px-4 sm:px-6 relative z-10 py-8">
+        <div class="max-w-3xl mx-auto text-center w-full">
             
             <!-- Floating Maintenance Icon -->
-            <div class="animate-float mb-8">
-                <div class="w-32 h-32 mx-auto glass rounded-full flex items-center justify-center animate-pulse-glow">
-                    <svg class="w-16 h-16 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="animate-float mb-6 sm:mb-8">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto glass rounded-full flex items-center justify-center animate-pulse-glow">
+                    <svg class="w-12 h-12 sm:w-16 sm:h-16 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
@@ -93,26 +117,26 @@
             </div>
 
             <!-- Main Message -->
-            <div class="glass rounded-3xl p-12 mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">
-                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-                    Website <span class="text-yellow-300">Temporarily</span><br>
-                    Unavailable
+            <div class="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 mb-6 sm:mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-4 sm:mb-6 leading-tight">
+                    Website <span class="text-yellow-300">Temporarily</span><br class="hidden sm:block">
+                    <span class="sm:hidden"> </span>Unavailable
                 </h1>
                 
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-8 rounded-full"></div>
+                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6 sm:mb-8 rounded-full"></div>
                 
-                <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed px-2">
                     We're currently performing maintenance to improve your experience.
                 </p>
                 
-                <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
-                    <h2 class="text-2xl font-bold text-white mb-4">
-                        <svg class="w-6 h-6 inline mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white/10 border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 inline mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         We'll Be Back Soon
                     </h2>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
                         Our team is working hard to get everything back online. 
                         Thank you for your patience while we make improvements to serve you better.
                     </p>
@@ -120,46 +144,46 @@
             </div>
 
             <!-- Additional Info -->
-            <div class="glass rounded-2xl p-8 animate-fadeInUp" style="animation-delay: 0.6s;">
-                <h3 class="text-2xl font-bold text-white mb-6">What's Happening?</h3>
+            <div class="glass rounded-xl sm:rounded-2xl p-6 sm:p-8 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">What's Happening?</h3>
                 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">System Updates</h4>
-                        <p class="text-gray-400 text-sm">Installing important updates to enhance performance and security.</p>
+                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">System Updates</h4>
+                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Installing important updates to enhance performance and security.</p>
                     </div>
                     
-                    <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                        <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Improvements</h4>
-                        <p class="text-gray-400 text-sm">Adding new features and optimizing existing functionality.</p>
+                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">Improvements</h4>
+                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Adding new features and optimizing existing functionality.</p>
                     </div>
                     
-                    <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                        <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10 sm:col-span-2 md:col-span-1">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Quality Assurance</h4>
-                        <p class="text-gray-400 text-sm">Testing everything to ensure the best possible experience.</p>
+                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">Quality Assurance</h4>
+                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Testing everything to ensure the best possible experience.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Footer -->
-            <div class="mt-12 text-center animate-fadeInUp" style="animation-delay: 1s;">
-                <p class="text-gray-300 text-lg mb-2">Thank you for your patience!</p>
-                <p class="text-gray-500 text-sm">
+            <div class="mt-8 sm:mt-12 text-center animate-fadeInUp" style="animation-delay: 1s;">
+                <p class="text-gray-300 text-base sm:text-lg mb-2">Thank you for your patience!</p>
+                <p class="text-gray-500 text-xs sm:text-sm">
                     Expected to be back online shortly
                 </p>
             </div>
