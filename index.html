@@ -2,300 +2,766 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Temporarily Unavailable</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="KDS International School - Nurturing Excellence, Building Future Leaders. Premier international education with world-class facilities and experienced faculty.">
+    <meta name="keywords" content="KDS International School, international education, boarding school, quality education, CBSE, ICSE">
+    <meta name="author" content="KDS International School">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KDS International School">
+    <meta property="og:description" content="Nurturing Excellence, Building Future Leaders">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    
+    <title>KDS International School - Nurturing Excellence, Building Future Leaders</title>
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        body {
+            font-family: 'Poppins', sans-serif;
         }
-
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-            100% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            background-size: 300% 300%;
-            animation: gradientShift 8s ease infinite;
-        }
-
-        .glass {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite alternate;
-        }
-
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-
-        /* Mobile Optimizations */
-        @media (max-width: 768px) {
-            .glass {
-                backdrop-filter: blur(15px);
-                background: rgba(255, 255, 255, 0.12);
+        
+        /* Critical Mobile CSS - Loads First */
+        @media screen and (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+                margin: 0;
+                padding: 0;
             }
             
-            .gradient-bg {
-                background-attachment: scroll;
+            * {
+                box-sizing: border-box;
             }
             
-            /* Hide floating elements on mobile for performance */
-            .fixed {
-                display: none;
+            /* Immediate mobile fixes */
+            .text-5xl, .text-6xl, .text-7xl {
+                font-size: 2rem !important;
             }
-        }
-
-        @media (max-width: 480px) {
-            .glass {
-                backdrop-filter: blur(10px);
-                background: rgba(255, 255, 255, 0.15);
+            
+            .text-4xl {
+                font-size: 1.75rem !important;
             }
-        }
-
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    }
-                }
+            
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+            
+            .text-xl {
+                font-size: 1rem !important;
+            }
+            
+            .px-8 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .py-20 {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
             }
         }
     </style>
 </head>
-<body class="font-inter gradient-bg min-h-screen">
-    
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-20">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+<body class="bg-gray-50">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="text-white text-xl mt-6 font-semibold">Loading KDS International School...</p>
     </div>
 
-    <!-- Main Content -->
-    <div class="min-h-screen flex items-center justify-center px-4 sm:px-6 relative z-10 py-8">
-        <div class="max-w-3xl mx-auto text-center w-full">
-            
-            <!-- Floating Maintenance Icon -->
-            <div class="animate-float mb-6 sm:mb-8">
-                <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto glass rounded-full flex items-center justify-center animate-pulse-glow">
-                    <svg class="w-12 h-12 sm:w-16 sm:h-16 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
+    <!-- Navigation -->
+    <nav class="navbar-glass fixed w-full top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="img/logo.jpg" alt="KDS International School Logo" class="h-12 w-auto mr-3">
+                    <div>
+                        <h1 class="text-xl font-bold text-gradient">KDS International School</h1>
+                        <p class="text-xs text-gray-600">Excellence in Education</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">About</a>
+                    <a href="#academics" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Academics</a>
+                    <a href="#facilities" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Facilities</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Gallery</a>
+                    <a href="#leadership" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Leadership</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50">
+            <div class="p-6">
+                <div class="flex justify-end mb-8">
+                    <button id="mobile-menu-close" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">About</a>
+                    <a href="#academics" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Academics</a>
+                    <a href="#facilities" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Facilities</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Gallery</a>
+                    <a href="#leadership" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Leadership</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Contact</a>
                 </div>
             </div>
+        </div>
+    </nav>
 
-            <!-- Main Message -->
-            <div class="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 mb-6 sm:mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-4 sm:mb-6 leading-tight">
-                    Website <span class="text-yellow-300">Temporarily</span><br class="hidden sm:block">
-                    <span class="sm:hidden"> </span>Unavailable
+    <!-- Hero Section -->
+    <header id="home" class="hero-gradient relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Particles Background -->
+        <div class="particles">
+            <div class="particle" style="width: 4px; height: 4px; left: 10%; top: 20%;"></div>
+            <div class="particle" style="width: 6px; height: 6px; left: 20%; top: 40%;"></div>
+            <div class="particle" style="width: 8px; height: 8px; left: 30%; top: 60%;"></div>
+            <div class="particle" style="width: 5px; height: 5px; left: 40%; top: 30%;"></div>
+            <div class="particle" style="width: 7px; height: 7px; left: 60%; top: 50%;"></div>
+            <div class="particle" style="width: 4px; height: 4px; left: 70%; top: 70%;"></div>
+            <div class="particle" style="width: 6px; height: 6px; left: 80%; top: 20%;"></div>
+            <div class="particle" style="width: 5px; height: 5px; left: 90%; top: 80%;"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="animate-bounce-in">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Welcome to <br>
+                    <span class="hero-title">KDS International School</span>
                 </h1>
-                
-                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6 sm:mb-8 rounded-full"></div>
-                
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed px-2">
-                    We're currently performing maintenance to improve your experience.
+                <p class="text-xl sm:text-2xl text-white mb-8 font-light">
+                    Nurturing Excellence, Building Future Leaders
                 </p>
-                
-                <div class="bg-white/10 border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6">
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 inline mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        We'll Be Back Soon
-                    </h2>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Our team is working hard to get everything back online. 
-                        Thank you for your patience while we make improvements to serve you better.
-                    </p>
+                <p class="text-lg text-white/90 mb-12 max-w-2xl mx-auto">
+                    Empowering students with world-class education, innovative learning methods, and a holistic approach to personal development.
+                </p>
+                <div class="flex flex-col gap-4 justify-center items-center w-full px-4">
+                    <a href="#about" class="btn-primary shimmer">
+                        Discover More
+                    </a>
+                    <a href="#contact" class="glass text-white font-semibold rounded-full hover:bg-white/25 transition-all duration-300">
+                        Get In Touch
+                    </a>
                 </div>
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-3xl"></i>
+        </div>
+    </header>
 
-            <!-- Additional Info -->
-            <div class="glass rounded-xl sm:rounded-2xl p-6 sm:p-8 animate-fadeInUp" style="animation-delay: 0.6s;">
-                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">What's Happening?</h3>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">About KDS International School</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Established with a vision to provide world-class education, KDS International School has been shaping young minds and nurturing future leaders for years.
+                    </p>
+                </div>
+
+                <!-- Statistics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-5xl font-bold text-gradient mb-2">
+                            <span class="counter">500</span>+
                         </div>
-                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">System Updates</h4>
-                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Installing important updates to enhance performance and security.</p>
+                        <p class="text-gray-600 font-medium">Students</p>
                     </div>
-                    
-                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-5xl font-bold text-gradient mb-2">
+                            <span class="counter">50</span>+
                         </div>
-                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">Improvements</h4>
-                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Adding new features and optimizing existing functionality.</p>
+                        <p class="text-gray-600 font-medium">Expert Teachers</p>
                     </div>
-                    
-                    <div class="bg-white/5 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-white/10 sm:col-span-2 md:col-span-1">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-5xl font-bold text-gradient mb-2">
+                            <span class="counter">25</span>+
                         </div>
-                        <h4 class="font-semibold text-white mb-2 text-sm sm:text-base">Quality Assurance</h4>
-                        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Testing everything to ensure the best possible experience.</p>
+                        <p class="text-gray-600 font-medium">Facilities</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-5xl font-bold text-gradient mb-2">
+                            <span class="counter">98</span>%
+                        </div>
+                        <p class="text-gray-600 font-medium">Success Rate</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Footer -->
-            <div class="mt-8 sm:mt-12 text-center animate-fadeInUp" style="animation-delay: 1s;">
-                <p class="text-gray-300 text-base sm:text-lg mb-2">Thank you for your patience!</p>
-                <p class="text-gray-500 text-xs sm:text-sm">
-                    Expected to be back online shortly
-                </p>
-            </div>
-
-            <!-- Demo Content to Show Scrolling -->
-            <div class="mt-16 glass rounded-xl p-6 animate-fadeInUp" style="animation-delay: 1.4s;">
-                <h3 class="text-2xl font-bold text-white mb-4">Additional Information</h3>
-                <div class="space-y-4 text-left">
-                    <p class="text-gray-300 leading-relaxed">
-                        During this maintenance window, we are implementing several key improvements to enhance your browsing experience. 
-                        Our development team is working around the clock to ensure minimal downtime.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        The updates include performance optimizations, security enhancements, and new features that will make your 
-                        interaction with our platform more seamless and enjoyable.
-                    </p>
-                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 mt-6">
-                        <h4 class="text-white font-semibold mb-2">Stay Connected</h4>
-                        <p class="text-gray-400 text-sm">
-                            Follow us on our social media channels for real-time updates on the maintenance progress.
+                <!-- Mission & Vision -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 rounded-2xl hover-lift">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Our Mission</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            To provide a nurturing and stimulating environment that fosters academic excellence, creativity, and character development. We aim to prepare students to become responsible global citizens who can make meaningful contributions to society.
+                        </p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl hover-lift">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4">
+                                <i class="fas fa-eye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Our Vision</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            To be a leading international school recognized for academic excellence, innovative teaching methodologies, and holistic student development. We envision creating leaders who are equipped with the knowledge, skills, and values to thrive in a rapidly changing world.
                         </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- More content to demonstrate scrolling -->
-            <div class="mt-8 glass rounded-xl p-6 animate-fadeInUp" style="animation-delay: 1.8s;">
-                <h3 class="text-2xl font-bold text-white mb-4">What to Expect</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-3">Enhanced Performance</h4>
-                        <ul class="text-gray-300 space-y-2 text-sm">
-                            <li>• Faster page loading times</li>
-                            <li>• Improved mobile responsiveness</li>
-                            <li>• Better resource optimization</li>
-                            <li>• Enhanced user interface</li>
+        <!-- Academics Section -->
+        <section id="academics" class="py-20 bg-gray-50 fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Academic Excellence</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Our comprehensive curriculum is designed to challenge and inspire students, fostering critical thinking and lifelong learning.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Academic Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-book-open text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Primary Education</h3>
+                        <p class="text-gray-600 mb-4">
+                            Building strong foundations through engaging and interactive learning experiences that nurture curiosity and creativity.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Activity-based learning</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Individual attention</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Skill development</li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-3">New Features</h4>
-                        <ul class="text-gray-300 space-y-2 text-sm">
-                            <li>• Advanced search functionality</li>
-                            <li>• Improved navigation</li>
-                            <li>• Better accessibility features</li>
-                            <li>• Enhanced security measures</li>
+
+                    <!-- Academic Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Secondary Education</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive curriculum preparing students for academic excellence and personal growth through diverse subjects.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>CBSE/ICSE curriculum</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Expert faculty</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Career guidance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Academic Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-trophy text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Co-curricular Activities</h3>
+                        <p class="text-gray-600 mb-4">
+                            Holistic development through sports, arts, music, and various clubs that enhance creativity and teamwork.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Sports & athletics</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Arts & music</li>
+                            <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Leadership programs</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Subtle Animation Elements - Only on desktop -->
-    <div class="hidden md:block fixed top-10 left-10 w-20 h-20 bg-blue-500/10 rounded-full animate-float" style="animation-delay: -2s;"></div>
-    <div class="hidden md:block fixed bottom-20 right-20 w-16 h-16 bg-purple-500/10 rounded-full animate-float" style="animation-delay: -4s;"></div>
-    <div class="hidden md:block fixed top-1/3 right-10 w-12 h-12 bg-pink-500/10 rounded-full animate-float" style="animation-delay: -6s;"></div>
+        <!-- Facilities Section -->
+        <section id="facilities" class="py-20 bg-white fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">World-Class Facilities</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        State-of-the-art infrastructure designed to provide the best learning environment for our students.
+                    </p>
+                </div>
 
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Facility 1 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-flask text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Science Labs</h3>
+                        <p class="text-gray-600">Modern laboratories equipped with latest equipment for hands-on learning.</p>
+                    </div>
+
+                    <!-- Facility 2 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Computer Labs</h3>
+                        <p class="text-gray-600">High-tech computer labs with latest software and internet connectivity.</p>
+                    </div>
+
+                    <!-- Facility 3 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book-reader text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Library</h3>
+                        <p class="text-gray-600">Extensive collection of books, journals, and digital resources.</p>
+                    </div>
+
+                    <!-- Facility 4 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-running text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Sports Complex</h3>
+                        <p class="text-gray-600">Multi-purpose sports facilities including playgrounds and indoor courts.</p>
+                    </div>
+
+                    <!-- Facility 5 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-music text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Music & Arts</h3>
+                        <p class="text-gray-600">Dedicated spaces for music, dance, and visual arts activities.</p>
+                    </div>
+
+                    <!-- Facility 6 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-utensils text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Cafeteria</h3>
+                        <p class="text-gray-600">Hygienic cafeteria serving nutritious and delicious meals.</p>
+                    </div>
+
+                    <!-- Facility 7 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bus text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Transport</h3>
+                        <p class="text-gray-600">Safe and reliable transportation with GPS-tracked buses.</p>
+                    </div>
+
+                    <!-- Facility 8 -->
+                    <div class="glass-card p-6 rounded-2xl text-center hover-lift">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bed text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Hostel</h3>
+                        <p class="text-gray-600">Comfortable boarding facilities with round-the-clock supervision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section with Slider -->
+        <section id="gallery" class="py-20 bg-gray-50 fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Campus Gallery</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Explore our vibrant campus and witness the energy of learning in action.
+                    </p>
+                </div>
+
+                <!-- Image Slider -->
+                <div class="relative max-w-5xl mx-auto">
+                    <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                        <div class="relative h-96 md:h-[600px] bg-gray-900">
+                            <!-- Slider Images - Replace image1.jpg through image7.jpg with your actual image filenames -->
+                            <img src="img/photo1.jpg" alt="School Campus View 1" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500">
+                            <img src="img/photo2.jpg" alt="School Campus View 2" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo3.jpg" alt="School Campus View 3" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo4.jpg" alt="School Campus View 4" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo5.jpg" alt="School Campus View 5" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo6.jpg" alt="School Campus View 6" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo7.jpg" alt="School Campus View 7" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+
+                            <!-- Navigation Buttons -->
+                            <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
+                                <i class="fas fa-chevron-left text-purple-600 text-xl"></i>
+                            </button>
+                            <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
+                                <i class="fas fa-chevron-right text-purple-600 text-xl"></i>
+                            </button>
+
+                            <!-- Indicators -->
+                            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+                                <button class="indicator w-3 h-3 rounded-full bg-purple-600 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="mt-16 grid md:grid-cols-2 gap-8">
+                    <div class="glass-card rounded-2xl overflow-hidden shadow-xl">
+                        <video controls class="w-full h-full">
+                            <source src="vids/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="glass-card rounded-2xl overflow-hidden shadow-xl">
+                        <video controls class="w-full h-full">
+                            <source src="vids/video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="py-20 bg-white fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Our Leadership</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Meet the visionary leaders who guide our institution towards excellence.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Director -->
+                    <div class="glass-card p-8 rounded-2xl text-center hover-lift">
+                        <div class="mb-6">
+                            <div class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
+                                <img src="img/director.jpg" alt="Director of KDS International School" class="w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Director's Name</h3>
+                        <p class="text-purple-600 font-semibold mb-4">Director</p>
+                        <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-4"></div>
+                        <p class="text-gray-600 leading-relaxed">
+                            With years of experience in education and a passion for nurturing young minds, our Director leads KDS International School with a vision of excellence and innovation. Their dedication to quality education has been instrumental in shaping the institution's success.
+                        </p>
+                    </div>
+
+                    <!-- Principal -->
+                    <div class="glass-card p-8 rounded-2xl text-center hover-lift">
+                        <div class="mb-6">
+                            <div class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
+                                <img src="img/principal.jpg" alt="Principal of KDS International School" class="w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Principal's Name</h3>
+                        <p class="text-purple-600 font-semibold mb-4">Principal</p>
+                        <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-4"></div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our Principal brings a wealth of academic expertise and leadership to KDS International School. With a commitment to student-centered learning and holistic development, they ensure that every student receives the support and guidance needed to reach their full potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50 fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Get In Touch</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We'd love to hear from you. Reach out to us for admissions, inquiries, or any questions.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl hover-lift">
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-800">Address</h3>
+                                    <p class="text-gray-600">
+                                        KDS International School<br>
+                                        School Address Line 1<br>
+                                        City, State - PIN Code
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl hover-lift">
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-800">Phone</h3>
+                                    <p class="text-gray-600">
+                                        +91 XXX XXX XXXX<br>
+                                        +91 XXX XXX XXXX
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl hover-lift">
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-800">Email</h3>
+                                    <p class="text-gray-600">
+                                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aac3c4ccc5eac1ced9c3c4decfd8c4cbdec3c5c4cbc684c9c5c7">[email&#160;protected]</a><br>
+                                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddbcb9b0b4aeaeb4b2b3ae9db6b9aeb4b3a9b8afb3bca9b4b2b3bcb1f3beb2b0">[email&#160;protected]</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                            </div>
+                            <div>
+                                <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300 resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full shimmer">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">KDS International School</h4>
+                    <p class="text-white/80 mb-4">
+                        Nurturing excellence and building future leaders through world-class education.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-white/80 hover:text-white transition-all duration-300">About Us</a></li>
+                        <li><a href="#academics" class="text-white/80 hover:text-white transition-all duration-300">Academics</a></li>
+                        <li><a href="#facilities" class="text-white/80 hover:text-white transition-all duration-300">Facilities</a></li>
+                        <li><a href="#gallery" class="text-white/80 hover:text-white transition-all duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Important Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Important</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Admissions</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Fee Structure</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Calendar</a></li>
+                        <li><a href="#contact" class="text-white/80 hover:text-white transition-all duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-white/80">
+                        <li><i class="fas fa-phone mr-2"></i>+91 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="224b4c444d624946514b4c5647504c43564b4d4c434e0c414d4f">[email&#160;protected]</a></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>City, State, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-white/80">
+                    &copy; 2024 KDS International School. All rights reserved. | 
+                    <a href="#" class="hover:text-white transition-all duration-300">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition-all duration-300">Terms of Service</a>
+                </p>
+            </div>        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Additional script for mobile menu close button and faster loading -->
     <script>
-        // Add some interactive elements
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Animate elements on load
-            const elements = document.querySelectorAll('.animate-fadeInUp');
-            elements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, index * 200);
-            });
-
-            // Add click ripple effect to glass elements
-            const glassElements = document.querySelectorAll('.glass');
-            glassElements.forEach(el => {
-                el.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = el.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
-                    
-                    el.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open mobile menu
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileMenu.classList.add('open');
+                    if (mobileMenuOverlay) {
+                        mobileMenuOverlay.classList.remove('hidden');
+                    }
+                    document.body.style.overflow = 'hidden';
                 });
-            });
-        });
-
-        // Add ripple CSS
-        const style = document.createElement('style');
-        style.textContent = `
-            .ripple {
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.3);
-                transform: scale(0);
-                animation: ripple-animation 0.6s linear;
-                pointer-events: none;
             }
             
-            @keyframes ripple-animation {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
+            // Close mobile menu
+            function closeMobileMenu() {
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('open');
                 }
+                if (mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.add('hidden');
+                }
+                document.body.style.overflow = '';
             }
-        `;
-        document.head.appendChild(style);
+            
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeMobileMenu();
+                });
+            }
+            
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+            
+            // Close menu when clicking nav links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+            
+            // Force hide loading screen after DOM is ready
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                }
+            }, 500);
+            
+            // Fix viewport on iOS for input zoom
+            const inputs = document.querySelectorAll('input, textarea, select');
+            inputs.forEach(function(element) {
+                element.addEventListener('focus', function() {
+                    if (window.innerWidth < 768) {
+                        document.querySelector('meta[name=viewport]').setAttribute('content', 
+                            'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+                    }
+                });
+                
+                element.addEventListener('blur', function() {
+                    if (window.innerWidth < 768) {
+                        document.querySelector('meta[name=viewport]').setAttribute('content', 
+                            'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+                    }
+                });
+            });
+            
+            // Prevent horizontal scroll
+            document.body.style.overflowX = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+        });
     </script>
 </body>
 </html>
