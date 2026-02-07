@@ -527,8 +527,9 @@ button:focus {
     }
     
     /* Reduce excessive animations on mobile for performance */
-    * {
-        animation-duration: 0.3s !important;
+    /* REMOVED THE * SELECTOR THAT CAUSED FAST ANIMATION */
+    .animate-bounce {
+         animation: none !important;
     }
     
     /* Mobile logo sizing */
@@ -668,8 +669,9 @@ button:focus {
         height: 50vh !important;
     }
 }
+
 /* ========================================
-   CRITICAL MOBILE FIXES - ADD THIS TO YOUR STYLE.CSS
+   CRITICAL MOBILE FIXES
    ======================================== */
 
 /* Mobile First - Base styles for mobile */
@@ -888,6 +890,13 @@ button:focus {
         width: 9rem !important;
         height: 9rem !important;
     }
+
+    /* FIX LEADERSHIP IMAGES ON MOBILE */
+    #leadership .rounded-full img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
     
     /* CONTACT SECTION - MOBILE */
     input, textarea {
@@ -931,10 +940,6 @@ button:focus {
         animation: none !important;
     }
     
-    * {
-        animation-duration: 0.2s !important;
-    }
-    
     /* MOBILE MENU FIX */
     #mobile-menu {
         transform: translateX(100%) !important;
@@ -953,7 +958,7 @@ button:focus {
     /* ENSURE IMAGES DON'T OVERFLOW */
     img {
         max-width: 100% !important;
-        height: auto !important;
+        /* height: auto !important;  <-- REMOVED THIS to prevent conflict with leadership images */
     }
     
     /* MOBILE PADDING FIXES */
