@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Enhanced Loading Screen
     const loadingScreen = document.getElementById('loading-screen');
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
         }, 800);
@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Enhanced Mobile Menu
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', function() {
+
+    mobileMenuButton.addEventListener('click', function () {
         mobileMenu.classList.toggle('open');
     });
 
     // Smooth Scrolling with offset for fixed nav
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: offsetTop,
                     behavior: 'smooth'
                 });
-                
+
                 // Close mobile menu
                 if (mobileMenu && mobileMenu.classList.contains('open')) {
                     mobileMenu.classList.remove('open');
@@ -37,39 +37,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Enhanced Intersection Observer for animations
     // Enhanced Intersection Observer for animations (Mobile friendly)
-const observerOptions = {
-    root: null,
-    threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
-    rootMargin: window.innerWidth <= 768 ? '0px' : '-50px'
-};
+    const observerOptions = {
+        root: null,
+        threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+        rootMargin: window.innerWidth <= 768 ? '0px' : '-50px'
+    };
 
-// Apply fade-in immediately for mobile as a fallback
-function fallbackShowFadeInSections() {
-    if (window.innerWidth <= 768) {
-        document.querySelectorAll('.fade-in-section').forEach(section => {
-            section.classList.add('is-visible');
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
-        });
-    }
-}
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target); // Unobserve only after revealing
+    // Apply fade-in immediately for mobile as a fallback
+    function fallbackShowFadeInSections() {
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                section.classList.add('is-visible');
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            });
         }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Unobserve only after revealing
+            }
+        });
+    }, observerOptions);
+
+    // Observe all fade-in sections
+    document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
+
+    // Fallback: Always show on mobile after 2s, in case observer threshold fails
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(fallbackShowFadeInSections, 2000);
     });
-}, observerOptions);
-
-// Observe all fade-in sections
-document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
-
-// Fallback: Always show on mobile after 2s, in case observer threshold fails
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(fallbackShowFadeInSections, 2000);
-});
 
 
     // Enhanced Gallery Slider
@@ -170,7 +170,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
+
         if (currentScrollY > 100) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             navbar.style.backdropFilter = 'blur(20px)';
@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.style.transform = 'translateY(0)';
         }
-        
+
         lastScrollY = currentScrollY;
     });
 
@@ -194,7 +194,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.3; // Reduced for better performance
-        
+
         if (hero && scrolled < window.innerHeight) {
             hero.style.transform = `translate3d(0, ${rate}px, 0)`;
         }
@@ -203,12 +203,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // Add hover effects to cards
     const cards = document.querySelectorAll('.hover-lift');
     cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-10px) scale(1.02)';
             this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
             this.style.boxShadow = '';
         });
@@ -221,7 +221,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const target = parseInt(counter.textContent);
             const increment = target / 100;
             let current = 0;
-            
+
             const updateCounter = () => {
                 if (current < target) {
                     current += increment;
@@ -231,7 +231,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     counter.textContent = target;
                 }
             };
-            
+
             updateCounter();
         });
     };
@@ -247,32 +247,32 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-        
+
         statsObserver.observe(aboutSection);
     }
 
     // Add ripple effect to buttons
     const buttons = document.querySelectorAll('a[class*="bg-"], button');
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             // Don't add ripple to navigation links
             if (this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
                 return;
             }
-            
+
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -291,11 +291,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // Add interactive hover effects for navigation links
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
+        link.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
-        
-        link.addEventListener('mouseleave', function() {
+
+        link.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -325,7 +325,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Performance optimization: Throttle scroll events
     let ticking = false;
-    
+
     function updateOnScroll() {
         // Your scroll-based animations here
         ticking = false;
@@ -342,20 +342,20 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', requestTick);
 
     // Keyboard navigation support
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Tab') {
             document.body.classList.add('keyboard-navigation');
         }
     });
 
-    document.addEventListener('mousedown', function() {
+    document.addEventListener('mousedown', function () {
         document.body.classList.remove('keyboard-navigation');
     });
 
     // Form validation (if forms are added later)
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             // Add form validation logic here
             console.log('Form submitted');
@@ -365,7 +365,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Error handling for images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('error', function() {
+        img.addEventListener('error', function () {
             this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><text x="50" y="50" text-anchor="middle" fill="%23999">Image</text></svg>';
         });
     });
@@ -402,10 +402,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // Reduced motion support
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-        
+
         // Disable auto-playing animations
         clearInterval(autoPlayInterval);
-        
+
         // Disable parallax
         window.removeEventListener('scroll', () => {
             if (hero) {

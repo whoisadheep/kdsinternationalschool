@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="KDS International School - Nurturing Excellence, Building Future Leaders. Premier international education with world-class facilities and experienced faculty.">
-    <meta name="keywords" content="KDS International School, international education, boarding school, quality education, CBSE, ICSE">
+    <meta name="description"
+        content="KDS International School - Nurturing Excellence, Building Future Leaders. Premier international education with world-class facilities and experienced faculty.">
+    <meta name="keywords"
+        content="KDS International School, international education, boarding school, quality education, CBSE, ICSE">
     <meta name="author" content="KDS International School">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="KDS International School">
     <meta property="og:description" content="Nurturing Excellence, Building Future Leaders">
     <meta property="og:type" content="website">
     <meta property="og:image" content="logo.png">
-    
+
     <title>KDS International School - Nurturing Excellence, Building Future Leaders</title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
-        
+
         /* Critical Mobile CSS - Loads First */
         @media screen and (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden;
                 width: 100%;
                 margin: 0;
                 padding: 0;
             }
-            
+
             * {
                 box-sizing: border-box;
             }
-            
+
             /* Immediate mobile fixes */
-            .text-5xl, .text-6xl, .text-7xl {
+            .text-5xl,
+            .text-6xl,
+            .text-7xl {
                 font-size: 2rem !important;
             }
-            
+
             .text-4xl {
                 font-size: 1.75rem !important;
             }
-            
+
             .text-3xl {
                 font-size: 1.5rem !important;
             }
-            
+
             .text-2xl {
                 font-size: 1.25rem !important;
             }
-            
+
             .text-xl {
                 font-size: 1rem !important;
             }
-            
+
             .px-8 {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
-            
+
             .py-20 {
                 padding-top: 2.5rem !important;
                 padding-bottom: 2.5rem !important;
             }
-            
+
             .mb-16 {
                 margin-bottom: 2rem !important;
             }
-            
+
             img {
                 max-width: 100%;
                 height: auto;
@@ -90,6 +98,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
@@ -109,25 +118,34 @@
                         <p class="text-xs text-gray-600">Excellence in Education</p>
                     </div>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">About</a>
-                    <a href="#academics" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Academics</a>
-                    <a href="#facilities" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Facilities</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Gallery</a>
-                    <a href="#leadership" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Leadership</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Contact</a>
+                    <a href="#home"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Home</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">About</a>
+                    <a href="#academics"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Academics</a>
+                    <a href="#cbse-certificates"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Certificates</a>
+                    <a href="#facilities"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Facilities</a>
+                    <a href="#gallery"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Gallery</a>
+                    <a href="#leadership"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Leadership</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-purple-600 font-medium transition-all duration-300">Contact</a>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
         <div id="mobile-menu" class="mobile-menu md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50">
@@ -138,13 +156,22 @@
                     </button>
                 </div>
                 <div class="flex flex-col space-y-6">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">About</a>
-                    <a href="#academics" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Academics</a>
-                    <a href="#facilities" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Facilities</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Gallery</a>
-                    <a href="#leadership" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Leadership</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Contact</a>
+                    <a href="#home"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Home</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">About</a>
+                    <a href="#academics"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Academics</a>
+                    <a href="#cbse-certificates"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Certificates</a>
+                    <a href="#facilities"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Facilities</a>
+                    <a href="#gallery"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Gallery</a>
+                    <a href="#leadership"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Leadership</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-purple-600 font-medium text-lg transition-all duration-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -163,7 +190,7 @@
             <div class="particle" style="width: 6px; height: 6px; left: 80%; top: 20%;"></div>
             <div class="particle" style="width: 5px; height: 5px; left: 90%; top: 80%;"></div>
         </div>
-        
+
         <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
             <div class="animate-bounce-in">
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -174,19 +201,21 @@
                     Nurturing Excellence, Building Future Leaders
                 </p>
                 <p class="text-lg text-white/90 mb-12 max-w-2xl mx-auto">
-                    Empowering students with world-class education, innovative learning methods, and a holistic approach to personal development.
+                    Empowering students with world-class education, innovative learning methods, and a holistic approach
+                    to personal development.
                 </p>
                 <div class="flex flex-col gap-4 justify-center items-center w-full px-4">
                     <a href="#about" class="btn-primary shimmer">
                         Discover More
                     </a>
-                    <a href="#contact" class="glass text-white font-semibold rounded-full hover:bg-white/25 transition-all duration-300">
+                    <a href="#contact"
+                        class="glass text-white font-semibold rounded-full hover:bg-white/25 transition-all duration-300">
                         Get In Touch
                     </a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i class="fas fa-chevron-down text-white text-3xl"></i>
@@ -202,7 +231,8 @@
                     <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">About KDS International School</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Established with a vision to provide world-class education, KDS International School has been shaping young minds and nurturing future leaders for years.
+                        Established with a vision to provide world-class education, KDS International School has been
+                        shaping young minds and nurturing future leaders for years.
                     </p>
                 </div>
 
@@ -244,7 +274,9 @@
                             <h3 class="text-2xl font-bold text-gray-800">Our Mission</h3>
                         </div>
                         <p class="text-gray-600 leading-relaxed">
-                            To provide a nurturing and stimulating environment that fosters academic excellence, creativity, and character development. We aim to prepare students to become responsible global citizens who can make meaningful contributions to society.
+                            To provide a nurturing and stimulating environment that fosters academic excellence,
+                            creativity, and character development. We aim to prepare students to become responsible
+                            global citizens who can make meaningful contributions to society.
                         </p>
                     </div>
                     <div class="glass-card p-8 rounded-2xl hover-lift">
@@ -255,7 +287,9 @@
                             <h3 class="text-2xl font-bold text-gray-800">Our Vision</h3>
                         </div>
                         <p class="text-gray-600 leading-relaxed">
-                            To be a leading international school recognized for academic excellence, innovative teaching methodologies, and holistic student development. We envision creating leaders who are equipped with the knowledge, skills, and values to thrive in a rapidly changing world.
+                            To be a leading international school recognized for academic excellence, innovative teaching
+                            methodologies, and holistic student development. We envision creating leaders who are
+                            equipped with the knowledge, skills, and values to thrive in a rapidly changing world.
                         </p>
                     </div>
                 </div>
@@ -269,19 +303,22 @@
                     <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Academic Excellence</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Our comprehensive curriculum is designed to challenge and inspire students, fostering critical thinking and lifelong learning.
+                        Our comprehensive curriculum is designed to challenge and inspire students, fostering critical
+                        thinking and lifelong learning.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Academic Card 1 -->
                     <div class="glass-card p-8 rounded-2xl hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                             <i class="fas fa-book-open text-white text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Primary Education</h3>
                         <p class="text-gray-600 mb-4">
-                            Building strong foundations through engaging and interactive learning experiences that nurture curiosity and creativity.
+                            Building strong foundations through engaging and interactive learning experiences that
+                            nurture curiosity and creativity.
                         </p>
                         <ul class="space-y-2 text-gray-600">
                             <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Activity-based learning</li>
@@ -292,12 +329,14 @@
 
                     <!-- Academic Card 2 -->
                     <div class="glass-card p-8 rounded-2xl hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                             <i class="fas fa-graduation-cap text-white text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Secondary Education</h3>
                         <p class="text-gray-600 mb-4">
-                            Comprehensive curriculum preparing students for academic excellence and personal growth through diverse subjects.
+                            Comprehensive curriculum preparing students for academic excellence and personal growth
+                            through diverse subjects.
                         </p>
                         <ul class="space-y-2 text-gray-600">
                             <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>CBSE/ICSE curriculum</li>
@@ -308,18 +347,168 @@
 
                     <!-- Academic Card 3 -->
                     <div class="glass-card p-8 rounded-2xl hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                             <i class="fas fa-trophy text-white text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Co-curricular Activities</h3>
                         <p class="text-gray-600 mb-4">
-                            Holistic development through sports, arts, music, and various clubs that enhance creativity and teamwork.
+                            Holistic development through sports, arts, music, and various clubs that enhance creativity
+                            and teamwork.
                         </p>
                         <ul class="space-y-2 text-gray-600">
                             <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Sports & athletics</li>
                             <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Arts & music</li>
                             <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>Leadership programs</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CBSE Certificates Section -->
+        <section id="cbse-certificates" class="py-20 bg-white fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4 uppercase tracking-wider">CBSE
+                        Affiliated</span>
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">Our Certificates & Compliance</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        KDS International School is fully certified and compliant with all regulatory requirements,
+                        ensuring a safe, recognised, and trusted learning environment.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Certificate 1: Building Safety -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-pink-500">
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-building text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Building Safety Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Our school building meets all structural safety norms and is certified by the concerned
+                            civil authorities for safe occupancy.
+                        </p>
+                    </div>
+
+                    <!-- Certificate 2: Water Certificate -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+                        <div
+                            class="bg-gradient-to-r from-blue-500 to-cyan-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-tint text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Water Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Clean and potable water is available throughout the campus. Our water supply is tested and
+                            certified safe by health authorities.
+                        </p>
+                    </div>
+
+                    <!-- Certificate 3: Recognition Certificate -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-orange-400">
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-yellow-500 to-orange-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-award text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Recognition Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            KDS International School holds a formal Recognition Certificate from the State Education
+                            Department, validating our academic standing.
+                        </p>
+                    </div>
+
+                    <!-- Certificate 4: Fire Safety -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
+                        <div
+                            class="bg-gradient-to-r from-red-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-fire-extinguisher text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Fire Safety Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            The school is equipped with fire safety systems and holds a valid Fire NOC from the Fire
+                            Department to ensure student security.
+                        </p>
+                    </div>
+
+                    <!-- Certificate 5: Trust Certificate -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-600">
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-indigo-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-handshake text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Trust Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            KDS International School operates under a registered trust, duly certified and recognised
+                            under the relevant Trust Act for transparency.
+                        </p>
+                    </div>
+
+                    <!-- Certificate 6: Self Certificate -->
+                    <div class="glass-card p-8 rounded-2xl hover-lift group text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-teal-400"></div>
+                        <div
+                            class="bg-gradient-to-r from-green-500 to-teal-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-user-shield text-white text-3xl"></i>
+                        </div>
+                        <div
+                            class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-check-circle mr-1"></i> Certified
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Self Certificate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            The school management has submitted a self-declaration certificate affirming compliance with
+                            all CBSE affiliation norms and guidelines.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- CBSE Affiliation Banner -->
+                <div
+                    class="mt-14 bg-gradient-to-r from-purple-600 to-pink-500 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                    <div class="text-white text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-2">CBSE Affiliated School</h3>
+                        <p class="text-white/85 text-base max-w-xl">All certifications are up-to-date and in compliance
+                            with Central Board of Secondary Education (CBSE) affiliation requirements, ensuring quality
+                            education and student welfare.</p>
+                    </div>
+                    <div class="flex-shrink-0 bg-white/20 backdrop-blur rounded-2xl px-8 py-5 text-center text-white">
+                        <i class="fas fa-certificate text-4xl mb-2"></i>
+                        <p class="font-bold text-lg">100% Compliant</p>
+                        <p class="text-sm text-white/80">All 6 Certificates Valid</p>
                     </div>
                 </div>
             </div>
@@ -332,32 +521,38 @@
                     <h2 class="text-4xl sm:text-5xl font-bold text-gradient mb-4">World-Class Facilities</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-6"></div>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        State-of-the-art infrastructure designed to provide the best learning environment for our students.
+                        State-of-the-art infrastructure designed to provide the best learning environment for our
+                        students.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Facility 1 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-flask text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Science Labs</h3>
-                        <p class="text-gray-600">Modern laboratories equipped with latest equipment for hands-on learning.</p>
+                        <p class="text-gray-600">Modern laboratories equipped with latest equipment for hands-on
+                            learning.</p>
                     </div>
 
                     <!-- Facility 2 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-laptop text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Computer Labs</h3>
-                        <p class="text-gray-600">High-tech computer labs with latest software and internet connectivity.</p>
+                        <p class="text-gray-600">High-tech computer labs with latest software and internet connectivity.
+                        </p>
                     </div>
 
                     <!-- Facility 3 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-book-reader text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Library</h3>
@@ -366,16 +561,19 @@
 
                     <!-- Facility 4 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-running text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Sports Complex</h3>
-                        <p class="text-gray-600">Multi-purpose sports facilities including playgrounds and indoor courts.</p>
+                        <p class="text-gray-600">Multi-purpose sports facilities including playgrounds and indoor
+                            courts.</p>
                     </div>
 
                     <!-- Facility 5 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-music text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Music & Arts</h3>
@@ -384,7 +582,8 @@
 
                     <!-- Facility 6 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-utensils text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Cafeteria</h3>
@@ -393,7 +592,8 @@
 
                     <!-- Facility 7 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-bus text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Transport</h3>
@@ -402,7 +602,8 @@
 
                     <!-- Facility 8 -->
                     <div class="glass-card p-6 rounded-2xl text-center hover-lift">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-r from-purple-600 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-bed text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Hostel</h3>
@@ -428,32 +629,48 @@
                     <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
                         <div class="relative h-96 md:h-[600px] bg-gray-900">
                             <!-- Slider Images - Replace image1.jpg through image7.jpg with your actual image filenames -->
-                            <img src="img/photo1.jpg" alt="School Campus View 1" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500">
-                            <img src="img/photo2.jpg" alt="School Campus View 2" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
-                            <img src="img/photo3.jpg" alt="School Campus View 3" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
-                            <img src="img/photo4.jpg" alt="School Campus View 4" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
-                            <img src="img/photo5.jpg" alt="School Campus View 5" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
-                            <img src="img/photo6.jpg" alt="School Campus View 6" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
-                            <img src="img/photo7.jpg" alt="School Campus View 7" class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo1.jpg" alt="School Campus View 1"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500">
+                            <img src="img/photo2.jpg" alt="School Campus View 2"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo3.jpg" alt="School Campus View 3"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo4.jpg" alt="School Campus View 4"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo5.jpg" alt="School Campus View 5"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo6.jpg" alt="School Campus View 6"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
+                            <img src="img/photo7.jpg" alt="School Campus View 7"
+                                class="slider-image absolute inset-0 w-full h-full object-contain transition-opacity duration-500 hidden opacity-0">
 
                             <!-- Navigation Buttons -->
-                            <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
+                            <button id="prev-btn"
+                                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
                                 <i class="fas fa-chevron-left text-purple-600 text-xl"></i>
                             </button>
-                            <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
+                            <button id="next-btn"
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-4 rounded-full shadow-lg transition-all duration-300 z-10">
                                 <i class="fas fa-chevron-right text-purple-600 text-xl"></i>
                             </button>
 
                             <!-- Indicators -->
                             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
-    <button class="indicator w-2 h-2 rounded-full bg-purple-600 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-    <button class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-</div>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-purple-600 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                                <button
+                                    class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                            </div>
 
                         </div>
                     </div>
@@ -492,30 +709,38 @@
                     <!-- Director -->
                     <div class="glass-card p-8 rounded-2xl text-center hover-lift">
                         <div class="mb-6">
-                            <div class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
-                                <img src="img/director.jpg" alt="Director of KDS International School" class="w-full h-full object-cover object-center">
+                            <div
+                                class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
+                                <img src="img/director.jpg" alt="Director of KDS International School"
+                                    class="w-full h-full object-cover object-center">
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Somnath Chaurasiya</h3>
                         <p class="text-purple-600 font-semibold mb-4">Director</p>
                         <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-4"></div>
                         <p class="text-gray-600 leading-relaxed">
-                            With years of experience in education and a passion for nurturing young minds, our Director leads KDS International School with a vision of excellence and innovation. Their dedication to quality education has been instrumental in shaping the institution's success.
+                            With years of experience in education and a passion for nurturing young minds, our Director
+                            leads KDS International School with a vision of excellence and innovation. Their dedication
+                            to quality education has been instrumental in shaping the institution's success.
                         </p>
                     </div>
 
                     <!-- Principal -->
                     <div class="glass-card p-8 rounded-2xl text-center hover-lift">
                         <div class="mb-6">
-                            <div class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
-                                <img src="img/principal.jpg" alt="Principal of KDS International School" class="w-full h-full object-cover object-center">
+                            <div
+                                class="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-purple-600 shadow-lg bg-gray-100">
+                                <img src="img/principal.jpg" alt="Principal of KDS International School"
+                                    class="w-full h-full object-cover object-center">
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Suman Chaurasiya</h3>
-                  <p class="text-purple-600 font-semibold mb-4">Principal</p>
+                        <p class="text-purple-600 font-semibold mb-4">Principal</p>
                         <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-4"></div>
                         <p class="text-gray-600 leading-relaxed">
-                            Our Principal brings a wealth of academic expertise and leadership to KDS International School. With a commitment to student-centered learning and holistic development, they ensure that every student receives the support and guidance needed to reach their full potential.
+                            Our Principal brings a wealth of academic expertise and leadership to KDS International
+                            School. With a commitment to student-centered learning and holistic development, they ensure
+                            that every student receives the support and guidance needed to reach their full potential.
                         </p>
                     </div>
                 </div>
@@ -538,7 +763,8 @@
                     <div class="space-y-6">
                         <div class="glass-card p-6 rounded-2xl hover-lift">
                             <div class="flex items-start">
-                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                <div
+                                    class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
                                     <i class="fas fa-map-marker-alt text-white text-xl"></i>
                                 </div>
                                 <div>
@@ -554,7 +780,8 @@
 
                         <div class="glass-card p-6 rounded-2xl hover-lift">
                             <div class="flex items-start">
-                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                <div
+                                    class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
                                     <i class="fas fa-phone-alt text-white text-xl"></i>
                                 </div>
                                 <div>
@@ -568,15 +795,18 @@
 
                         <div class="glass-card p-6 rounded-2xl hover-lift">
                             <div class="flex items-start">
-                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
+                                <div
+                                    class="bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mr-4 flex-shrink-0">
                                     <i class="fas fa-envelope text-white text-xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold mb-2 text-gray-800">Email</h3>
                                     <p class="text-gray-600">
-                                        <a <a href="/cdn-cgi/l/email-protection" class="__cf_email__ break-all" data-cfemail="...">kdsinternationalschool@gmail.com</a>
-<br>
-                                       
+                                        <a <a href="/cdn-cgi/l/email-protection" class="__cf_email__ break-all"
+                                            data-cfemail="..."><span class="__cf_email__"
+                                                data-cfemail="0e656a7d67607a6b7c606f7a6761606f627d6d666161624e69636f6762206d6163">[email&#160;protected]</span></a>
+                                        <br>
+
                                     </p>
                                 </div>
                             </div>
@@ -588,16 +818,20 @@
                         <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
                         <form class="space-y-4">
                             <div>
-                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                                <input type="text" placeholder="Your Name"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
                             </div>
                             <div>
-                                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                                <input type="email" placeholder="Your Email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
                             </div>
                             <div>
-                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
+                                <input type="tel" placeholder="Phone Number"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300">
                             </div>
                             <div>
-                                <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300 resize-none"></textarea>
+                                <textarea rows="5" placeholder="Your Message"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none transition-all duration-300 resize-none"></textarea>
                             </div>
                             <button type="submit" class="btn-primary w-full shimmer">
                                 Send Message <i class="fas fa-paper-plane ml-2"></i>
@@ -639,10 +873,14 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-white/80 hover:text-white transition-all duration-300">About Us</a></li>
-                        <li><a href="#academics" class="text-white/80 hover:text-white transition-all duration-300">Academics</a></li>
-                        <li><a href="#facilities" class="text-white/80 hover:text-white transition-all duration-300">Facilities</a></li>
-                        <li><a href="#gallery" class="text-white/80 hover:text-white transition-all duration-300">Gallery</a></li>
+                        <li><a href="#about" class="text-white/80 hover:text-white transition-all duration-300">About
+                                Us</a></li>
+                        <li><a href="#academics"
+                                class="text-white/80 hover:text-white transition-all duration-300">Academics</a></li>
+                        <li><a href="#facilities"
+                                class="text-white/80 hover:text-white transition-all duration-300">Facilities</a></li>
+                        <li><a href="#gallery"
+                                class="text-white/80 hover:text-white transition-all duration-300">Gallery</a></li>
                     </ul>
                 </div>
 
@@ -650,10 +888,14 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Admissions</a></li>
-                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Fee Structure</a></li>
-                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Calendar</a></li>
-                        <li><a href="#contact" class="text-white/80 hover:text-white transition-all duration-300">Contact</a></li>
+                        <li><a href="#"
+                                class="text-white/80 hover:text-white transition-all duration-300">Admissions</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Fee
+                                Structure</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-all duration-300">Calendar</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-white/80 hover:text-white transition-all duration-300">Contact</a></li>
                     </ul>
                 </div>
 
@@ -662,7 +904,12 @@
                     <h4 class="text-xl font-bold mb-4">Contact Info</h4>
                     <ul class="space-y-3 text-white/80">
                         <li><i class="fas fa-phone mr-2"></i>+91 81157 05556</li>
-                        <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="224b4c444d624946514b4c5647504c43564b4d4c434e0c414d4f">kdsinternationalschool@gmail.com</a></li>
+                        <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection"
+                                class="__cf_email__"
+                                data-cfemail="224b4c444d624946514b4c5647504c43564b4d4c434e0c414d4f"><span
+                                    class="__cf_email__"
+                                    data-cfemail="8ee5eafde7e0faebfce0effae7e1e0efe2fdede6e1e1e2cee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a>
+                        </li>
                         <li><i class="fas fa-map-marker-alt mr-2"></i>City, State, India</li>
                     </ul>
                 </div>
@@ -671,28 +918,30 @@
             <!-- Copyright -->
             <div class="border-t border-white/20 pt-8 text-center">
                 <p class="text-white/80">
-                    &copy; 2024 KDS International School. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition-all duration-300">Privacy Policy</a> | 
+                    &copy; 2024 KDS International School. All rights reserved. |
+                    <a href="#" class="hover:text-white transition-all duration-300">Privacy Policy</a> |
                     <a href="#" class="hover:text-white transition-all duration-300">Terms of Service</a>
                 </p>
-            </div>        </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Custom JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
-    
+
     <!-- Additional script for mobile menu close button and faster loading -->
     <script>
         // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
             const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            
+
             // Open mobile menu
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', function(e) {
+                mobileMenuBtn.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     mobileMenu.classList.add('open');
@@ -702,7 +951,7 @@
                     document.body.style.overflow = 'hidden';
                 });
             }
-            
+
             // Close mobile menu
             function closeMobileMenu() {
                 if (mobileMenu) {
@@ -713,56 +962,56 @@
                 }
                 document.body.style.overflow = '';
             }
-            
+
             if (mobileMenuClose) {
-                mobileMenuClose.addEventListener('click', function(e) {
+                mobileMenuClose.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     closeMobileMenu();
                 });
             }
-            
+
             if (mobileMenuOverlay) {
                 mobileMenuOverlay.addEventListener('click', closeMobileMenu);
             }
-            
+
             // Close menu when clicking nav links
             document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     closeMobileMenu();
                 });
             });
-            
+
             // Force hide loading screen after DOM is ready
-            setTimeout(function() {
+            setTimeout(function () {
                 const loadingScreen = document.getElementById('loading-screen');
                 if (loadingScreen) {
                     loadingScreen.classList.add('hidden');
                 }
             }, 500);
-            
+
             // Fix viewport on iOS for input zoom
             const inputs = document.querySelectorAll('input, textarea, select');
-            inputs.forEach(function(element) {
-                element.addEventListener('focus', function() {
+            inputs.forEach(function (element) {
+                element.addEventListener('focus', function () {
                     if (window.innerWidth < 768) {
-                        document.querySelector('meta[name=viewport]').setAttribute('content', 
-                            'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
-                    }
-                });
-                
-                element.addEventListener('blur', function() {
-                    if (window.innerWidth < 768) {
-                        document.querySelector('meta[name=viewport]').setAttribute('content', 
+                        document.querySelector('meta[name=viewport]').setAttribute('content',
                             'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
                     }
                 });
             });
-            
-            // Prevent horizontal scroll
-            document.body.style.overflowX = 'hidden';
-            document.documentElement.style.overflowX = 'hidden';
         });
     </script>
 </body>
-</html>
+
+</html>imum-scale=1.0, user-scalable=0');
+}
+});
+
+element.addEventListener('blur', function () {
+if (window.innerWidth < 768) {
+    document.querySelector('meta[name=viewport]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes'
+    ); } }); }); }); </script>
+    </body>
+
+    </html>
